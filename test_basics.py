@@ -124,6 +124,9 @@ class TestBasics(unittest.TestCase):
         jacek = basics.Animal("Jacek")
         self.assertEquals(jacek.name, "Jacek")
 
+    def test_dog_inherited_from_animal(self):
+        self.assertTrue(issubclass(basics.Dog, basics.Animal))
+
     def test_dog_name(self):
         reksio = basics.Dog("Reksio")
         self.assertEquals(reksio.name, "Reksio")
