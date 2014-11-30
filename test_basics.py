@@ -9,9 +9,9 @@ import sys
 from StringIO import StringIO
 
 
-class TestBasics(unittest.TestCase):
+class TestUnique(unittest.TestCase):
+    """1st exercise"""
 
-    # 1
     def test_unique_empty_list(self):
         self.assertEquals(basics.unique([]), [])
 
@@ -28,7 +28,10 @@ class TestBasics(unittest.TestCase):
             [-20, -2.1, 2, 4.12]
         )
 
-    # 2
+
+class TestDayFromInt(unittest.TestCase):
+    """2nd exercise"""
+
     def test_day_from_int(self):
         self.assertEquals(basics.day_from_int(1), u"Poniedziałek")
         self.assertEquals(basics.day_from_int(4), u"Czwartek")
@@ -41,7 +44,10 @@ class TestBasics(unittest.TestCase):
     def test_day_from_too_high_int(self):
         self.assertEquals(basics.day_from_int(100), u"")
 
-    # 3
+
+class TestMinDictValue(unittest.TestCase):
+    """3rd exercise"""
+
     def test_min_empty_dict_value(self):
         self.assertEquals(basics.min_dict_value({}), None)
 
@@ -61,7 +67,10 @@ class TestBasics(unittest.TestCase):
             -100
         )
 
-    # 4
+
+class TestPowerList(unittest.TestCase):
+    """4th exercise"""
+
     def test_power_empty_list(self):
         self.assertEquals(basics.power_list([], 0), [])
 
@@ -70,7 +79,10 @@ class TestBasics(unittest.TestCase):
         self.assertEquals(basics.power_list([3, 4], 2), [9, 16])
         self.assertEquals(basics.power_list([9, 16], .5), [3, 4])
 
-    # 5
+
+class TestNineDivisible(unittest.TestCase):
+    """5th exercise"""
+
     def test_generator_9_divisible_type(self):
         self.assertEquals(type(basics.nine_divisible(10)), types.GeneratorType)
 
@@ -80,7 +92,10 @@ class TestBasics(unittest.TestCase):
         self.assertEquals(list(basics.nine_divisible(20)), [9, 18])
         self.assertEquals(list(basics.nine_divisible(30)), [9, 18, 27])
 
-    # 6
+
+class TestIsPalindrome(unittest.TestCase):
+    """6th exercise"""
+
     def test_is_palindrome(self):
         self.assertEquals(basics.is_palindrome(''), True)
         self.assertEquals(basics.is_palindrome('ab'), False)
@@ -89,13 +104,19 @@ class TestBasics(unittest.TestCase):
         self.assertEquals(basics.is_palindrome('ahsatanseesnatasha'), True)
         self.assertEquals(basics.is_palindrome('tenanimalsislaminanet'), True)
 
-    # 7
+
+class TestFibonacci(unittest.TestCase):
+    """7th exercise"""
+
     def test_fibonacci(self):
         self.assertEquals(basics.fibonacci(1), 1)
         self.assertEquals(basics.fibonacci(5), 5)
         self.assertEquals(basics.fibonacci(100), 354224848179261915075)
 
-    # 8
+
+class TestSumArgs(unittest.TestCase):
+    """8th exercise"""
+
     def test_sum_args(self):
         self.assertEquals(basics.sum_args(), 0)
         self.assertEquals(basics.sum_args(1, 2), 3)
@@ -103,7 +124,10 @@ class TestBasics(unittest.TestCase):
         self.assertEquals(basics.sum_args(-1, 2, 10, 20, 40), 71)
         self.assertEquals(basics.sum_args(1, 1, 1, 1, 1, 1, 1), 7)
 
-    # 9
+
+class TestHigherThan(unittest.TestCase):
+    """9th exercise"""
+
     def test_higher_than(self):
         self.assertEquals(basics.higher_than([1, 2, 3, 4, 5], 2), [3, 4, 5])
         self.assertEquals(basics.higher_than([3, 23, 1, -2, 5], 3), [23, 5])
@@ -111,7 +135,10 @@ class TestBasics(unittest.TestCase):
         self.assertEquals(basics.higher_than([4, 3, 2, 1], 0), [4, 3, 2, 1])
         self.assertEquals(basics.higher_than([2, 2, 2, 2], 2), [])
 
-    # 10
+
+class TestQuickSort(unittest.TestCase):
+    """10th exercise"""
+
     def test_quicksort(self):
         self.assertEquals(basics.qsort([]), [])
         self.assertEquals(basics.qsort([5, 4, 3, 2, 1]), [1, 2, 3, 4, 5])
@@ -119,7 +146,10 @@ class TestBasics(unittest.TestCase):
         self.assertEquals(basics.qsort([-1, 20, 3, 1]), [-1, 1, 3, 20])
         self.assertEquals(basics.qsort([1, 2, 3]), [1, 2, 3])
 
-    # 11
+
+class TestAnimal(unittest.TestCase):
+    """11th exercise"""
+
     def test_animal_name(self):
         jacek = basics.Animal("Jacek")
         self.assertEquals(jacek.name, "Jacek")
