@@ -18,7 +18,7 @@ Napisz funkcję która potęguje każdy element listy do podanej potęgi.<br>
 Nazwa: `power_list`
 
 ## Zadanie 5.
-Napisz funkcję zwracająca generator liczb podzielnych przez 9 of 0 aż do danej.<br>
+Napisz funkcję zwracająca generator liczb podzielnych przez 9 od 1 aż do danej.<br>
 Nazwa: `nine_divisible`
 
 ## Zadanie 6.
