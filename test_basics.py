@@ -84,7 +84,10 @@ class TestNineDivisible(unittest.TestCase):
     """5th exercise"""
 
     def test_generator_9_divisible_type(self):
-        self.assertEquals(type(basics.nine_divisible(10)), types.GeneratorType)
+        result = basics.nine_divisible(10)
+        self.assertTrue(
+            isinstance(result, types.GeneratorType) or isinstance(result, xrange)
+        )
 
     def test_generator_9_divisible(self):
         self.assertEquals(list(basics.nine_divisible(10)), [9])
